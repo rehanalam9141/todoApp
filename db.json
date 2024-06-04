@@ -1,0 +1,13 @@
+{
+    "user":[
+        {
+            "id": "1",
+            "name": "Rehan Alam",
+            "email": "email",
+            "password": "123456789",
+            "userStatus": "true",
+            "description": "i am programmer and have 5 years experiens"
+
+        }
+    ]
+}
