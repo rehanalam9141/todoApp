@@ -1,0 +1,35 @@
+<div class="card mt-3">
+    <h3 class="card-header text-center">List of all Users</h3>
+    <div class="card-body">
+      <!-- <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Password</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of Users; track $index) {
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.userStatus}}</td>
+                <td>{{item.password}}</td>
+                <td>{{item.description}}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm">View</button>
+                </td>
+            </tr>
+        }
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -3,10 +3,19 @@
         {
             "id": "1",
             "name": "Rehan Alam",
-            "email": "email",
+            "email": "rehan@gmail.com",
             "password": "123456789",
             "userStatus": "true",
             "description": "i am programmer and have 5 years experiens"
+
+        },
+        {
+            "id": "2",
+            "name": "awais",
+            "email": "awais@gmail.com",
+            "password": "909909",
+            "userStatus": "true",
+            "description": "this is dummy data"
 
         }
     ]
