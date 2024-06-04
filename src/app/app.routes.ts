@@ -6,11 +6,13 @@ import { UpdateUserComponent } from './components/users/update-user/update-user.
 import { TaskComponent } from './components/tasks/task/task.component';
 import { UpdateTaskComponent } from './components/tasks/update-task/update-task.component';
 import { HomeComponent } from './components/home/home.component';
+import { UserDetailComponent } from './components/users/user-detail/user-detail.component';
 
 export const routes: Routes = [
-    { path:'', redirectTo:'home', pathMatch:'full'},
+    { path:'', redirectTo:'user', pathMatch:'full'},
     { path:'home', component: HomeComponent},
     { path:'user', component: UserComponent},
+    { path:'user-detail/:id', component: UserDetailComponent},
     { path:'adduser', component: AddUserComponent},
     { path:'edituser/:id', component: UpdateUserComponent},
     { path:'task', component: TaskComponent},

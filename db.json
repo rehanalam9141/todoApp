@@ -1,22 +1,36 @@
 {
-    "user":[
-        {
-            "id": "1",
-            "name": "Rehan Alam",
-            "email": "rehan@gmail.com",
-            "password": "123456789",
-            "userStatus": "true",
-            "description": "i am programmer and have 5 years experiens"
-
-        },
-        {
-            "id": "2",
-            "name": "awais",
-            "email": "awais@gmail.com",
-            "password": "909909",
-            "userStatus": "true",
-            "description": "this is dummy data"
-
-        }
-    ]
+  "user": [
+    {
+      "id": "1",
+      "name": "Rehan Alam",
+      "email": "rehan@gmail.com",
+      "password": "123456789",
+      "userStatus": "true",
+      "description": "i am programmer and have 5 years experiens"
+    },
+    {
+      "id": "2",
+      "name": "awais",
+      "email": "awais@gmail.com",
+      "password": "909909",
+      "userStatus": "true",
+      "description": "this is dummy data"
+    },
+    {
+      "id": "353b",
+      "name": "haseeb",
+      "email": "haseeb@gmail.com",
+      "userStatus": true,
+      "password": "123",
+      "description": "sdasdas"
+    },
+    {
+      "id": "6267",
+      "name": "aakif",
+      "email": "akif@gmail.com",
+      "userStatus": true,
+      "password": "123456",
+      "description": "aakif is learnign wordpress"
+    }
+  ]
 }

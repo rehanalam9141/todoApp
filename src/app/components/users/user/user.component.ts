@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { IUser } from '../../../types/user';
-import { User } from '../../../model/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -11,7 +11,7 @@ import { User } from '../../../model/user';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-constructor(private userService:UserService){
+constructor(private userService:UserService, private router:Router){
 }
 
 Users:IUser [] = [] 
@@ -23,5 +23,8 @@ AllUser(){
   this.userService.getAllUser().subscribe(result =>{
     this.Users = result
   })
+}
+viewUser(id:number){
+  this.router.navigate(['/user-detail/', id])
 }
 }
