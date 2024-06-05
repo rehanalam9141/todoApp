@@ -1,1 +1,36 @@
-<p>task works!</p>
+<div class="card mt-3">
+    <h3 class="card-header text-center">List of all Task</h3>
+    <div class="card-body">
+      <!-- <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Task Name</th>
+            <th>Category</th>
+            <th>Task Status</th>
+            <th>Created Date</th>
+            <th>Completed Date</th>
+            <th>Due Date</th>
+            <th>Description Date</th>
+            </tr>
+        </thead>
+        <tbody>
+           @for (item of task; track $index) {
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.taskName}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.taskStatus}}</td>
+                <td>{{item.createdOn}}</td>
+                <td>{{item.completedOn}}</td>
+                <td>{{item.dueDate}}</td>
+                <td>{{item.description}}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+</div>

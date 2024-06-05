@@ -1,1 +1,70 @@
-<p>add-task works!</p>
+<div class="card mt-3">
+    <h2 class="card-header p-3">Add Task</h2>
+    <div class="card-body">
+        <form [formGroup]="form">
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">User Id</label>
+                <input type="text" formControlName="userId" [value]="uid" readonly class="form-control" placeholder="Enter name">
+              </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Task Name</label>
+              <input type="text" formControlName="taskName" class="form-control" placeholder="Enter name">
+              <div *ngIf="f['taskName'].touched && f['taskName'].invalid" class="text-danger">
+                <div *ngIf="f['taskName'].errors && f['taskName'].errors['required']">Name is required.</div>
+                <div *ngIf="f['taskName'].errors && f['taskName'].errors['minlength']">Name lenght is minimum 5 character.</div>
+            </div>
+            </div>
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Category</label>
+                <input type="text" formControlName="category" class="form-control" placeholder="Enter email">
+                <div *ngIf="f['category'].touched && f['category'].invalid" class="text-danger">
+                    <div *ngIf="f['category'].errors && f['category'].errors['required']">Name is required.</div>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Task Status</label>
+                <input type="text" formControlName="taskStatus" class="form-control" placeholder="Enter email">
+                <div *ngIf="f['taskStatus'].touched && f['taskStatus'].invalid" class="text-danger">
+                    <div *ngIf="f['taskStatus'].errors && f['taskStatus'].errors['required']">Name is required.</div>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Created On</label>
+                <input type="date" formControlName="createdOn" class="form-control" placeholder="Enter email">
+                <div *ngIf="f['createdOn'].touched && f['createdOn'].invalid" class="text-danger">
+                    <div *ngIf="f['createdOn'].errors && f['createdOn'].errors['required']">Date is required.</div>
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Completed On</label>
+                <input type="date" formControlName="completedOn" class="form-control" placeholder="Enter email">
+                <div *ngIf="f['completedOn'].touched && f['completedOn'].invalid" class="text-danger">
+                    <div *ngIf="f['completedOn'].errors && f['completedOn'].errors['required']">Date is required.</div>
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Due Date</label>
+                <input type="date" formControlName="dueDate" class="form-control" placeholder="Enter email">
+                <div *ngIf="f['dueDate'].touched && f['dueDate'].invalid" class="text-danger">
+                    <div *ngIf="f['dueDate'].errors && f['dueDate'].errors['required']">Date is required.</div>
+                </div>
+            </div>
+
+           
+
+            <div class="form-group mt-3">
+                <label for="exampleInputPassword1">Description</label>
+                <textarea type="text" formControlName="description" class="form-control" id="exampleInputPassword1" placeholder="write your description here">
+                </textarea>
+
+                <div *ngIf="f['description'].touched && f['description'].invalid" class="text-danger">
+                    <div *ngIf="f['description'].errors && f['description'].errors['required']">Description is required</div>
+                </div>
+            </div>
+            <button class="btn btn-sm btn-primary mt-3" (click)="addTask()" >Add Task</button>
+          </form>  
+    </div>
+  </div>

@@ -7,6 +7,7 @@ import { TaskComponent } from './components/tasks/task/task.component';
 import { UpdateTaskComponent } from './components/tasks/update-task/update-task.component';
 import { HomeComponent } from './components/home/home.component';
 import { UserDetailComponent } from './components/users/user-detail/user-detail.component';
+import { AddTaskComponent } from './components/tasks/add-task/add-task.component';
 
 export const routes: Routes = [
     { path:'', redirectTo:'user', pathMatch:'full'},
@@ -16,8 +17,8 @@ export const routes: Routes = [
     { path:'adduser', component: AddUserComponent},
     { path:'edituser/:id', component: UpdateUserComponent},
     { path:'task', component: TaskComponent},
-    { path:'addtask', component: TaskComponent},
-    { path:'edittask/:id', component: UpdateTaskComponent},
+    { path:'addtask/:id', component: AddTaskComponent},
+    { path:'edittask/:id/:id', component: UpdateTaskComponent},
     { path:'not-found', component: NotFoundComponent},
     { path:'**', redirectTo:'not-found'},
 ];

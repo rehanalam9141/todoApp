@@ -3,15 +3,57 @@
     <div class="card-body">
       <h5 class="card-title">{{user.id}}</h5>
       <h5 class="card-title">{{user.email}}</h5>
-      <h5 class="card-title">{{user.userStatus}}</h5>
+      <h5 class="card-title"><span class="badge badge-pill" [ngClass]=" user.userStatus  ? 'bgActive' : 'bgInActive'">{{user.userStatus}}</span></h5>
       <p class="card-text">{{user.description}}</p>
      
     </div>
     <div class="card-footer ">
         <button class="btn btn-sm btn-dark" [routerLink]="['/user']">Back</button>     
-        <button class="btn btn-sm btn-primary m-2" (click)="addUser()">Add</button>     
-        <button class="btn btn-sm btn-primary m-2" (click)="deleteUser(user.id)">Delete</button>     
+            
+        <button class="btn btn-sm btn-danger m-2" (click)="deleteUser(user.id)">Delete</button>     
         <button class="btn btn-sm btn-warning  m-2" (click)="updateUser(user.id)">Edit</button>     
-        <button class="btn btn-sm btn-success">Add Task</button>     
+        <button class="btn btn-sm btn-success" (click)="addTask(user.id)">Add Task</button>     
     </div>
-  </div>
+</div>
+
+<div class="card mt-3">
+    <h3 class="card-header text-center">List of all Task</h3>
+    <div class="card-body">
+      <!-- <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Task Name</th>
+            <th>Category</th>
+            <th>Task Status</th>
+            <th>Created Date</th>
+            <th>Completed Date</th>
+            <th>Due Date</th>
+            <th>Description Date</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+           @for (item of taskById; track $index) {
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.taskName}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.taskStatus}}</td>
+                <td>{{item.createdOn}}</td>
+                <td>{{item.completedOn}}</td>
+                <td>{{item.dueDate}}</td>
+                <td>{{item.description}}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" (click)="editTask(item.id)">Edit</button>
+                    <button class="btn btn-danger btn-sm m-lg-2" (click)="deleteTask(item.id)">Delete</button>
+                </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+</div>

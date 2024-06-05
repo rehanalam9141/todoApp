@@ -3,11 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../../../services/user.service';
 import { User } from '../../../model/user';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-update-user',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './update-user.component.html',
   styleUrl: './update-user.component.css'
 })
@@ -26,6 +27,7 @@ export class UpdateUserComponent {
     })
   }
 
+  
   editUser(){
     this.userService.updateUser(this.id,this.user).subscribe((result)=>{
       alert("User updated successfully")

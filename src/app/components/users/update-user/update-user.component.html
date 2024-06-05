@@ -26,14 +26,6 @@
                 <div *ngIf="f['password'].errors && f['password'].errors['minlength']">Password lenght should be atleast 5 or more character.</div>
             </div> -->
             </div>
-            <div class="form-group mt-3">
-                <label for="exampleInputPassword1">Confirm Password</label>
-                <input type="password" [(ngModel)]="user.password" name="password" class="form-control"  placeholder="Confirm Password">
-                <!-- <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" class="text-danger">
-                    <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['required']">Name is required.</div>
-                    <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['minlength']">Password lenght should be atleast 5 or more character.</div>
-                </div> -->
-            </div>
             <div class="form-check mt-3">
               <input type="checkbox" [(ngModel)]="user.userStatus" name="userStatus"  class="form-check-input">
               <label class="form-check-label" for="exampleCheck1">Is User Active</label>

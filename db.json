@@ -5,7 +5,7 @@
       "name": "Rehan Alam",
       "email": "rehan@gmail.com",
       "password": "123456789",
-      "userStatus": "true",
+      "userStatus": false,
       "description": "i am programmer and have 5 years experiens"
     },
     {
@@ -31,6 +31,72 @@
       "userStatus": true,
       "password": "123456",
       "description": "aakif is learnign wordpress"
+    },
+    {
+      "id": "8bf6",
+      "name": "murad",
+      "email": "murad@gmail.com",
+      "userStatus": true,
+      "password": "123456",
+      "confirmPassword": "123456",
+      "description": "I am travel agent"
+    }
+  ],
+  "task": [
+    {
+      "id": "1",
+      "taskName": "HTML",
+      "category": "Web Desiging",
+      "createdOn": "12-02-2024",
+      "completedOn": "02-03-2024",
+      "dueDate": "10-04-2024",
+      "taskStatus": "inComplete",
+      "description": "in this course you will learn about web development",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "taskName": "web development",
+      "category": "Web",
+      "createdOn": "12-02-2024",
+      "completedOn": "02-03-2024",
+      "dueDate": "10-04-2024",
+      "taskStatus": "inComplete",
+      "description": "in this course you will learn about web development",
+      "userId": "6267"
+    },
+    {
+      "id": "3",
+      "taskName": "Mobile Development",
+      "category": "Mobile",
+      "createdOn": "12-02-2024",
+      "completedOn": "02-03-2024",
+      "dueDate": "10-04-2024",
+      "taskStatus": "inComplete",
+      "description": "in this course you will learn about web development",
+      "userId": "353b"
+    },
+    {
+      "id": "4",
+      "taskName": "Meeting",
+      "category": "Office",
+      "createdOn": "12-02-2024",
+      "completedOn": "02-03-2024",
+      "dueDate": "10-04-2024",
+      "taskStatus": "inComplete",
+      "description": "in this course you will learn about web development",
+      "userId": "2"
+    },
+    {
+      "id": "3300",
+      "userId": "8bf6",
+      "taskName": "traveling to UAE updated",
+      "category": "travelling updated",
+      "taskStatus": "process updated",
+      "createdOn": "2024-05-01",
+      "completedOn": "2025-07-15",
+      "dueDate": "2026-08-29",
+      "description": "traveling to uae "
     }
   ]
 }

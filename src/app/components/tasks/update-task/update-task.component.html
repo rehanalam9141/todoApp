@@ -1,1 +1,51 @@
-<p>update-task works!</p>
+<div class="card mt-3">
+    <h2 class="card-header p-3">Edit Task</h2>
+    <div class="card-body">
+        <form>
+
+            <!-- <div class="form-group">
+                <label for="exampleInputEmail1">User Id</label>
+                <input type="text"  [(ngModel)]="task.userId" name="userId" readonly class="form-control" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Task Id</label>
+                <input type="text"  [(ngModel)]="task.id" name="id" readonly class="form-control" placeholder="Enter name">
+            </div> -->
+            <div class="form-group">
+              <label for="exampleInputEmail1">Task Name</label>
+              <input type="text" [(ngModel)]="task.taskName" name="taskName" class="form-control" placeholder="Enter name">
+            </div>
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Category</label>
+                <input type="text" [(ngModel)]="task.category" name="category"  class="form-control" placeholder="Enter email">
+            </div>
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Task Status</label>
+                <input type="text" [(ngModel)]="task.taskStatus" name="taskStatus" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Created On</label>
+                <input type="date" [(ngModel)]="task.createdOn" name="createdOn"  class="form-control" placeholder="Enter email">
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Completed On</label>
+                <input type="date" [(ngModel)]="task.completedOn" name="completedOn"  class="form-control" placeholder="Enter email">
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Due Date</label>
+                <input type="date" [(ngModel)]="task.dueDate" name="dueDate" class="form-control" placeholder="Enter email">
+            </div>
+
+           
+
+            <div class="form-group mt-3">
+                <label for="exampleInputPassword1">Description</label>
+                <textarea type="text" [(ngModel)]="task.description" name="description" class="form-control" placeholder="write your description here">
+                </textarea>
+            </div>
+            <button class="btn btn-sm btn-primary mt-3" (click)="editTask()">Edit Task</button>
+          </form>  
+    </div>
+  </div>

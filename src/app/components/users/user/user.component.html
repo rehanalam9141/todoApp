@@ -1,5 +1,7 @@
 <div class="card mt-3">
     <h3 class="card-header text-center">List of all Users</h3>
+    <h3 class="card-header"><button class="btn btn-primary" (click)="addUser()">Add Task</button></h3>
+     
     <div class="card-body">
       <!-- <h5 class="card-title">Special title treatment</h5>
       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -21,7 +23,11 @@
                 <td>{{item.id}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.email}}</td>
-                <td>{{item.userStatus}}</td>
+                <td>
+                    <span class="badge badge-pill" [ngClass]=" item.userStatus  ? 'bgActive' : 'bgInActive'">
+                        {{item.userStatus  ? "Active": "InActive"}}
+                    </span>
+                </td>
                 <td>{{item.password}}</td>
                 <td>{{item.description}}</td>
                 <td>
