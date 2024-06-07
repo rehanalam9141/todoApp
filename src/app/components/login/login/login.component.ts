@@ -21,6 +21,12 @@ constructor(private userService:UserService, private router:Router){
     password: new FormControl('',[Validators.required])
   });
 }
+ngOnInit(): void {
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+  sessionStorage.setItem("isLogined","false");
+  return;
+}
 
 login(){
   this.user = this.form.value;

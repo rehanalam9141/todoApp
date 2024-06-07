@@ -7,8 +7,8 @@ export const authGuard: CanActivateFn = (route, state) => {
   let isLoggedIn = sessionStorage.getItem("isLogined");
 
   if(isLoggedIn == "false"){
-    router.navigate(['user']);
     alert("Please login first.......");
+    router.navigate(['login']);
     return false;
   }
   return true;
