@@ -18,7 +18,8 @@
                 <div *ngIf="f['password'].errors && f['password'].errors['minlength']">Password lenght should be atleast 5 or more character.</div>
               </div> -->
             </div>
-            <button class="btn btn-sm btn-primary mt-3" (click)="login()">Login</button>
+            <button class="btn btn-sm btn-primary mt-3" (click)="login()">Login</button><hr>
+            <label for="">If not register <a [routerLink]="['/adduser']">SignUp</a> Here</label>
           </form>  
     </div>
   </div>

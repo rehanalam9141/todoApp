@@ -40,6 +40,15 @@
       "password": "123456",
       "confirmPassword": "123456",
       "description": "I am travel agent"
+    },
+    {
+      "id": "293a",
+      "name": "Hamza",
+      "email": "hamza@gmai.com",
+      "userStatus": true,
+      "password": "00000",
+      "confirmPassword": "00000",
+      "description": "i am a tue gamer"
     }
   ],
   "task": [

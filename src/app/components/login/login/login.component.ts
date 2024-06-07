@@ -3,12 +3,12 @@ import { User } from '../../../model/user';
 import { CommonModule } from '@angular/common';
 import { Form, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../../services/user.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule],
+  imports: [FormsModule,ReactiveFormsModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -22,8 +22,6 @@ constructor(private userService:UserService, private router:Router){
   });
 }
 ngOnInit(): void {
-  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-  //Add 'implements OnInit' to the class.
   sessionStorage.setItem("isLogined","false");
   return;
 }
@@ -35,12 +33,12 @@ login(){
       return a.email === this.form.value.email && a.password === this.form.value.password 
     });
     if(user){
-      alert("login successfully")
+      alert("Login Successfully")
       sessionStorage.setItem("isLogined","true")
       this.router.navigate(['user'])
       this.form.reset();
     } else{
-      alert("invalid email and password or user not found")
+      alert("Invalid email and password or user not found")
       this.form.reset();
       sessionStorage.setItem("isLogined","false")
     }
