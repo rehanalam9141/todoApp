@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Task } from '../../../model/task';
+import { Category, TaskStatus } from '../../../types/enum';
 
 @Component({
   selector: 'app-add-task',
@@ -15,7 +16,13 @@ import { Task } from '../../../model/task';
 export class AddTaskComponent {
 
   form!:FormGroup;
-  uid!:number
+  uid!:number;
+  
+  tStatus = TaskStatus;
+  tcategory = Category;
+  statusKey = Object.keys
+  categoryKey = Object.keys
+  
   constructor(private taskService:TaskService, 
     private router:Router,
     private activatedRoute:ActivatedRoute){

@@ -4,6 +4,7 @@ import { TaskService } from '../../../services/task.service';
 import { Task } from '../../../model/task';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Category, TaskStatus } from '../../../types/enum';
 
 @Component({
   selector: 'app-update-task',
@@ -13,6 +14,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './update-task.component.css'
 })
 export class UpdateTaskComponent {
+
+  tStatus = TaskStatus;
+  tcategory = Category;
+  statusKey = Object.keys
+  categoryKey = Object.keys
 
   uid:number = 0
   tid:number = 0
@@ -31,6 +37,7 @@ export class UpdateTaskComponent {
       })     
     })
   }
+
 
   editTask(){
     this.taskService.updateTask(this.uid,this.task).subscribe((result)=>{

@@ -4,7 +4,7 @@ export class User {
     name:string;
     email:string;
     password:string;
-    userStatus:string;
+    userStatus:boolean;
     description:string
 
 
@@ -13,7 +13,7 @@ export class User {
         this.name = '';
         this.email = '';
         this.password = '';
-        this.userStatus = ''
+        this.userStatus = false
         this.description = '';
     }
 

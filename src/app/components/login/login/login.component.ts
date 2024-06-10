@@ -35,7 +35,8 @@ login(){
     if(user){
       alert("Login Successfully")
       sessionStorage.setItem("isLogined","true")
-      this.router.navigate(['user'])
+      //this.router.navigate(['user'])
+      this.router.navigate(['/user-detail/', user.id])
       this.form.reset();
     } else{
       alert("Invalid email and password or user not found")

@@ -19,6 +19,14 @@
 <div class="card mt-3">
     <h3 class="card-header text-center">List of all Task</h3>
     <div class="card-body">
+     <div class="card-header text-center">
+      <h4> Search task by Group</h4>
+      <button class="btn btn-sm btn-success" (click)="search('complete')">complete</button> 
+      <button class="btn btn-sm btn-warning  m-2" (click)="search('inprogress')">InProgress</button>     
+      <button class="btn btn-sm btn-danger m-2" (click)="search('Expire')">Due Task</button>     
+      <button class="btn btn-sm btn-danger m-2" (click)="resetTask()">Reset</button>     
+      <hr>
+     </div>
       <!-- <h5 class="card-title">Special title treatment</h5>
       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
       <a href="#" class="btn btn-primary">Go somewhere</a> -->

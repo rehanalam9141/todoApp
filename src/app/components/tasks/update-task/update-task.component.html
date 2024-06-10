@@ -15,14 +15,34 @@
               <label for="exampleInputEmail1">Task Name</label>
               <input type="text" [(ngModel)]="task.taskName" name="taskName" class="form-control" placeholder="Enter name">
             </div>
-            <div class="form-group mt-3">
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Category</label>
+                <select [(ngModel)]="task.category" name="category" formControlName="category" class="form-control" >
+                    <option value="">------Select------ </option>
+                  @for (item of categoryKey(tcategory); track $index) {
+                  <option [value]="item">{{item}}</option>
+                  }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Task Status</label>
+                <select formControlName="taskStatus" class="form-control" >
+                    <option value="">------Select------ </option>
+                  @for (item of statusKey(tStatus); track $index) {
+                  <option [(ngModel)]="task.taskStatus" name="taskStatus" [value]="item">{{item}}</option>
+                  }
+                </select>
+              </div>
+            <!-- <div class="form-group mt-3">
                 <label for="exampleInputEmail1">Category</label>
                 <input type="text" [(ngModel)]="task.category" name="category"  class="form-control" placeholder="Enter email">
             </div>
             <div class="form-group mt-3">
                 <label for="exampleInputEmail1">Task Status</label>
                 <input type="text" [(ngModel)]="task.taskStatus" name="taskStatus" class="form-control" placeholder="Enter email">
-            </div>
+            </div> -->
             <div class="form-group mt-3">
                 <label for="exampleInputEmail1">Created On</label>
                 <input type="date" [(ngModel)]="task.createdOn" name="createdOn"  class="form-control" placeholder="Enter email">

@@ -5,6 +5,7 @@ import { User } from '../../../model/user';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 import { Task } from '../../../model/task';
 import { TaskService } from '../../../services/task.service';
+import { ITask } from '../../../types/task';
 
 @Component({
   selector: 'app-user-detail',
@@ -27,7 +28,7 @@ export class UserDetailComponent {
   tid:number = 0
   user!:User;
   task:Task[]=[];
-  taskById:Task[]=[];
+  taskById!:Task[];
 
 
 
@@ -50,6 +51,9 @@ export class UserDetailComponent {
      })
   }
 
+  resetTask(){
+    this.getTaskById()
+  }
   
   updateUser(id:number){
     this.router.navigate(['/edituser', id])
@@ -63,13 +67,17 @@ export class UserDetailComponent {
   }
 
   addTask(id:number){
-    if(this.user.userStatus === "false"){
-      alert("this user is InActive and can not perform any action")
+    if(this.user.userStatus === false){
+      alert("This user is InActive and can not perform any action")
       return;
     }
-    this.router.navigate(['addtask/', id])
+    else{
+    this.router.navigate(['addtask/',id])
+  }}
+  search(status:string){
+   const filterByStatus = this.taskById.filter(i => i.taskStatus === status)
+   this.taskById = filterByStatus;
   }
-
   
   editTask(id:number){
     this.router.navigate(['/edittask',this.uid,id])

@@ -3,6 +3,7 @@ import { UserService } from '../../../services/user.service';
 import { IUser } from '../../../types/user';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { User } from '../../../model/user';
 
 @Component({
   selector: 'app-user',
@@ -15,7 +16,7 @@ export class UserComponent {
 constructor(private userService:UserService, private router:Router){
 }
 
-Users:IUser [] = [] 
+Users!:User[] 
 ngOnInit(): void {
   this.AllUser();  
 }
